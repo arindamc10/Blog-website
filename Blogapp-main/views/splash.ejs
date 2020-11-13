@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Blogapp</title>
+	<meta name="viewport" content="width=device-width, initial-scale=0.5">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	
+	
+	<style>
+			*{
+				margin:0px;
+				padding:0px;
+				box-sizing:border-box;
+			}
+		body{
+			 font-family:roboto;
+		}
+		.wrap{
+			background:rgba(0,0,0,0.5) url("https://images.unsplash.com/photo-1501504905252-473c47e087f8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60") no-repeat;
+			background-position:center;
+			background-size:cover;
+			min-height:100vh;
+			overflow:hidden;
+			background-blend-mode:overlay;
+		}
+		.wave{
+			position:absolute;
+			width:100%;
+			bottom:-140px;
+			color:#fff;
+			opacity:1;
+		}
+		header{
+			position:fixed;
+			top:0;
+			left:0;
+			width:100%;
+			padding:25px 80px;
+			background:linear-gradient(to top,transparent,rgba(0,0,0,0.6));
+		}
+		header  .logo{
+			font-size:28px;
+			font-weight:700;
+			color:#fff;
+			float:left;
+		}
+		header  .menu{
+			float:right;
+			margin-top:5px;
+			
+			
+		}
+		header ul li{
+			display:inline-block;
+			color:#fff;
+			margin:0 25px;
+			font-size:16px;
+			font-weight:300;
+			letter-spacing:1;
+		}
+		header ul li a{
+			text-decoration:none;
+			
+			color:#fff;
+			
+			
+		}
+		.content{
+			max-width:55%;
+			padding:200px 80px 0;
+			color:#fff;
+		}
+		.content h1{
+			font-size:40px;
+			
+		}
+		.content p{
+			font-size:20px;
+			padding:25 0;
+			font-weight:300;
+		}
+		.content .btn-group{
+			margin-top:45px;
+			
+		}
+		
+		.content a.color1{
+			background-color:yellow;
+		}
+		
+		
+		</style>
+	</head>
+	<body>
+		<div class="wrap">
+			<header>
+				<div class="logo">
+					LOGO
+				</div>
+				<div class="menu">
+					<ul>
+						<li href="/">Home</li>
+						<li href="#">About</li>
+					</ul>
+					
+				</div>
+				
+			</header>
+			<div class="content">
+				<h1>
+					Get started with creating your own blog
+				</h1>
+				<p>
+					Our sole purpose is to help you find compelling ideas, knowledge, and perspectives. We don’t serve ads—we serve you, the curious reader who loves to learn new things. Blogs is home to thousands of independent voices, and we combine humans and technology to find the best reading for you—and filter out the rest.
+				</p>
+				<a class="btn btn-primary" href="/login" role="button">Login</a>
+				<a class="btn btn-warning" href="/register" role="button">Register</a>
+			</div>
+		  
+			
+			
+		</div>
+		
+		
+		
+	</body>
+</html>

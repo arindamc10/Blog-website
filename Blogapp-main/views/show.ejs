@@ -1,0 +1,53 @@
+<%-include("header.ejs") %>
+<div class="ui main text container segment">
+	<div class="ui huge header">
+		<%=blog.title%>
+	</div>
+	<div class="item">
+		
+	
+	<img class="ui centered rounded image" src="<%=blog.image%>">
+    <div class="content">
+		<span><%=blog.created.toDateString()%></span>
+		
+		</div>	
+	<div class="Description">
+		<p>
+		<%=blog.body%>
+	</p>
+		
+		</div>	
+	
+	
+		</div>
+	<div>
+		Submitted by <%=blog.author.username %>
+	</div>
+	
+	
+	<form class="ui form" action="/blogs/<%=blog.id%>?_method=DELETE" method="POST">
+		<button class="ui red basic button">Delete
+			
+		</button>
+		<a  class="ui orange basic button" href="/blogs/<%=blog.id%>/edit">Edit</a>
+	</form>
+	
+</div>
+<div class="ui main text container segment">
+	
+	<div>
+		
+	<div class="ui huge header">
+	
+		<a href="/blogs/<%=blog._id%>/comments/new" class="ui secondary button">Add Comment</a></div>
+<% blog.comments.forEach(function(comment){%>
+	<p>
+		<strong><%=comment.author%></strong>-<%=comment.text%>
+	</p>
+	<%});%>
+</div>
+		
+	
+<%-include("footer.ejs") %>
+
+

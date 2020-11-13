@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Blogapp</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" crossorigin="anonymous">
+	<link rel="stylesheet"type="text-css" href="/stylesheets/app.css" >
+	</head>
+	<div class="ui inverted menu">
+  		<div class="header item"><i class="code icon"></i>
+    		Blog
+  		</div>
+  <a class="item">
+    About Us
+  </a>
+  <a  href="/" class="item">
+	  Home
+    
+  </a>
+  <a  href="/blogs/new" class="item">
+    Create Blog
+  </a>
+	
+		<div class="right menu">
+			<a href="#" class="item">Signed in as <%=currentUser.username%></a>
+			<a href="/logout" class="item">Log Out</a>
+		</div>
+</div>
+<div class="ui container" >
+	<div class="ui main text container segment">
+		
+	
+	<div class="ui huge header">BlogApp</div>
+	
+		<div class="ui link cards">
+			
+		
+		
+	
+   
+	   
+	
+	<%blogs.forEach(function(object){%>
+			<div class="card">
+				<div class="image">
+					<img src="<%=object.image%>">
+					
+				</div>
+				<div class="content">
+					<a class="header" href="/blogs/<%=object.id%>"><%=object.title%></a>
+					<div class="meta">
+						<span><%=object.created.toDateString()%></span>
+						
+					</div>
+					<div class="description">
+						<p><%-object.body.substring(0,100)%>....</p>
+						
+					</div>
+					<div class="extra">
+						<a class="ui floated basic violet button" href="/blogs/<%=object.id%>">Read More</a>
+						
+					</div>
+				</div>
+		    </div>
+			<%})%>
+		</div>
+	</div>
+
+	</div>
+
+	
+
+<%-include("footer.ejs") %>
